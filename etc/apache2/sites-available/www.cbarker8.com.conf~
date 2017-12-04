@@ -1,0 +1,13 @@
+<Virtualhost *:80>
+Servername www.cbarker8.com
+Serveralias cbarker8.com
+DocumentRoot /srv/www/www.cbarker8.com
+<Directory /srv/www/www.cbarker8.com>
+  Order allow,deny
+  Allow from all
+  Require valid-user
+  Authname "www.cbarker8.com Private Entry"
+  AuthType Basic
+  AuthUserFile /etc/apache2/authfiles/htpasswd-cbarker8
+</Directory>
+</Virtualhost>
